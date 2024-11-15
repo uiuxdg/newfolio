@@ -27,7 +27,10 @@
     --chart-3: 197 37% 24%;  
     --chart-4: 43 74% 66%;  
     --chart-5: 27 87% 67%;  
-    --radius: 0.5rem
+    --radius: 0.5rem;  
+    --tracing-gradient-start: #6b7280; /* Neutral 500 */  
+    --tracing-gradient-middle: #8b5cf6; /* Purple 500 */  
+    --tracing-gradient-end: #4f46e5; /* Purple 600 */
   }
   .dark {  
     --background: 20 14.3% 4.1%;  
@@ -64,3 +67,31 @@
     @apply bg-background text-foreground;
   }
 }  
+
+/* Add these styles after your existing CSS */
+
+.simplebar-scrollbar::before {
+  background-color: #999;
+  opacity: 0.5;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .simplebar-scrollbar::before {
+  background-color: #666;
+}
+
+.simplebar-track.simplebar-vertical {
+  width: 10px;
+  background: rgba(0, 0, 0, 0.0);
+  border-radius: 6px;
+}
+
+.dark .simplebar-track.simplebar-vertical {
+  background: rgba(255, 255, 255, 0.00);
+}
+
+/* Hide scrollbar for webkit browsers */
+.simplebar-content-wrapper::-webkit-scrollbar {
+  display: none;
+}

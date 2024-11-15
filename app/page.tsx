@@ -1,101 +1,513 @@
+"use client";
+import { Timeline } from "@/components/ui/timeline";
+import CTASection from "@/components/ui/cta-section";
 import Image from "next/image";
+import { CollapsibleContent } from "@/components/ui/collapsible-content";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const data = [
+    {
+      title: "Fall 2024",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> from scratch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/calcgen1.gif"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/1.png"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                Designed to research and visualize any data question, CalcGen uses a multi-agent and search retrieval system to analyze a user query, collect data from either the web or an uploaded file, and create a beautiful, interactive, and customizable visualization based on the user's request, which can then be shared or embedded anywhere with one click The tool can handle queries such as "plot the top ten financial tech companies by market cap" or "plot this data on a chart, and let me select the column to display".
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/calcgen2.gif"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/2.png"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+              <div className="pt-8">
+
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                CalcGen was built in Next.js, with a custom-built AI agent framework, and uses a combination of various LLMs, structured outputs, and search to answer any data question. The frontend is built with Tailwind CSS. CalcGen appeared as a trending product in prominent AI newsletters, including Rundown AI, Superhuman, and Superpower Daily, reaching over 2M total subscribers, and gaining over 1000 followers on instagram.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/calcgen3.gif"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/3.png"
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+              </div>
+              <div className="pt-8">
+
+<p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+  Data analysis and visualization tools are notoriously tedious and time-consuming to use. CalcGen is designed to provide a fast, easy, and beautiful way to analyze and visualize any data question, from any device. It also has the capability of creating custom graphing calculators, based on any provided formula, so it can visualize queries such as e.g. "compare the appreciation of two assets over time, based on given starting values, growth rates, and time periods."
+</p>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <Image
+    src="/calcgen4.gif"
+    alt="startup template"
+    width={500}
+    height={500}
+    className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+  />
+  <Image
+    src="/5.png"
+    alt="startup template"
+    width={500}
+    height={500}
+    className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+  />
+</div>
+</div>
+<div className="pt-8">
+
+<p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+Users can edit the generated title and description, change the chart type, and apply any of 40+ provided themes to their creation. They can also access our showcase of community creations made publicly available for inspiration. Creations can be shared as a link, or embedded into any website, or tools such as Notion, Miro, Google Classroom, Shopify, and more.</p></div>
+
+            </div>
+          }
+        />
+      ),
+    },
+    {
+      title: "Spring 2024",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                At AKALA, a 2024 Techstars edtech startup, I designed and built a new way for students to learn about the costs of adult life to better plan for their future. 
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/akala1.gif"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/akala2.gif"
+                  alt="feature template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                Leading a team of graduate engineering interns from USC, I created Dreamcatcher, a 3D lifestyle calculator designed to help young people understand the different costs of various lifestyle choices in an entertaining and engaging way.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/akala3.gif"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/akala4.gif"
+                  alt="cards template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+              <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                AKALA Dreamcatcher was built in React, Next.js, Three.js, and GSAP, along with several other supporting JS libraries. The fully responsive web app was designed to be accessible and delightful to use on desktop, tablet, and mobile devices.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/akala5.gif"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/akala1.jpg"
+                  alt="cards template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+              </div>
+            </div>
+            
+            
+          }
+        />
+      ),
+    },
+    {
+      title: "January 2024",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                To complete my undergrad at Williams College, I completed a final independent study in Cognitive Science, exploring the role of cognitive load in digital learning interfaces.
+              </p>
+              <div className="grid grid-cols-1 gap-4">
+                <Image
+                  src="/williams1.png"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-48 md:h-64 lg:h-96 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                {/* <Image
+                  src="https://assets.aceternity.com/features-section.png"
+                  alt="feature template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                /> */}
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                My work included a literature review, a survey, and a series of experiments testing the effects of different digital learning interfaces on cognitive load. My findings supported the idea that factors including the amount of information displayed, the amount of time spent on each page, and the modalities of information all play a role in how much cognitive load is experienced, and that measured cognitive load correlates with retention and recall.
+              </p>
+             
+            </div>
+          }
+        />
+      ),
+    },
+    {
+      title: "Summer 2023",
+      content: (
+        <CollapsibleContent
+        preview={
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+            At ThinkCERCA, a Series B edtech startup, I designed a platform for teachers to gain skills to improve their curriculum design.
+          </p>
+         
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/thinkcerca1.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+            <Image
+              src="/thinkcerca2.png"
+              alt="feature template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+           
+            </div>
+          </div>
+        }
+        fullContent={
+          <div className="pt-8">
+             <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+           The platform was built in Hubspot's HubLMS, and included a series of interactive, gamified modules. Prototyping was done in Figma. Working with a team of 4, including a product manager, content writer, and Hubspot expert, I was responsible for the design and development of the platform, including the creation of the course structure, the visual design of the interactive modules, and the user experience.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Image
+              src="/thinkcerca3.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+                        <Image
+              src="/thinkcerca4.png"
+              alt="hero template"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+
+          </div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
+          Before development began, I completed a comprehensive UX research and competitive analysis study on leading edtech companies in the space. The research was used to inform the design of the platform, and the final product was a success, being used by over 1200 teachers in the 2023-2024 school year.
+          </p>
+
+          </div>
+        }
+        />
+      ),
+    },
+    {
+      title: "Spring 2023",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                At Williams, I cofounded a startup that used AI to help students effectively manage their syllabi, assignments, and notes. We were among the top 4 winners of the 2023 Williams College Pitch Competition. As a student, I also completed extensive coursework in Cognitive Science, Theoretical AI, UX Design, and Computer Science.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/chateph1.png"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full"
+                />
+                <Image
+                  src="/chateph2.png"
+                  alt="feature template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+The app provides an AI-based productivity tool for college students to manage courses, scheduling, and notes. Working alongside my technical cofounder, I designed mockups, prototypes, and our final pitch deck that was presented in front of students, professors, and potential investors.             </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/chateph3.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/chateph4.png"
+                  alt="cards template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+          }
+        />
+      ),
+    },
+    {
+      title: "2022",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                At Beat the Streets, a national sports-based youth development nonprofit, I designed a mobile platform for athletes and coaches to track their progress and goals, as well as manage teams, schedule practices, and more.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/bts2.png"
+                  alt="hero template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-auto w-full "
+                />
+                <Image
+                  src="/bts4.png"
+                  alt="feature template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-auto w-full "
+                />
+
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
+              As the lead UI/UX designer, I spearheaded the design of a comprehensive mobile app tailored to the needs of athletes, coaches, and administrators within BTSNE. My responsibilities encompassed creating an interactive, high-fidelity prototype in Figma, designing an animated graphic logo for the app's loading screen, and developing a user-friendly design system aligned with BTSNE's brand identity. I worked in close collaboration with the CEO and the development team to ensure the design solutions were technically feasible and aligned with the organization's mission.              </p>
+              <div className="grid grid-cols-1 gap-4">
+                <Image
+                  src="/bts8.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover  w-full"
+                />
+               
+              </div>
+              <div className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+                <h3 className="font-bold pt-4">Interactive Figma Prototype:</h3>
+                <p>Utilizing Figma, I designed a high-fidelity prototype that allowed stakeholders to experience and interact with the app's design before development began. This process facilitated early feedback and iterative improvements, ensuring the final design met user needs effectively.</p>
+
+                <h3 className="font-bold pt-4">Animated Graphic Logo:</h3>
+                <p>To enhance brand recognition and create a memorable first impression, I created an animated logo for the app's loading screen. This element was designed to capture the dynamism of the sport of wrestling and the energy of BTSNE's community.</p>
+
+                <h3 className="font-bold pt-4">User-Centric Design System:</h3>
+                <p>Drawing on BTSNE's brand guidelines, I developed a design system that was visually appealing and functional. This system supported a consistent and accessible user experience across the app, incorporating elements like color schemes, typography, and UI components that resonate with BTSNE's mission.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Image
+                  src="/bts7.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/bts1.gif"
+                  alt="cards template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full bg-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </div>
+            </div>
+            
+          }
+        />
+      ),
+    },
+    {
+      title: "Other Projects",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                Working independently, I built websites and designed apps for local businesses, and taught myself how to design and code. Here are some highlights:
+              </p>
+            
+              <div className="grid grid-cols-1 gap-4">
+                <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Together Roasters Mobile App</h3>
+                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">I designed a mobile app for a local coffee shop using Figma. Here are the screens from the prototype:</p>
+                <Image
+                  src="/tr1.png"
+                  alt="hero template"
+                  width={2000}
+                  height={2000}
+                  className="rounded-lg object-cover h-auto w-full "
+                />
+               
+              </div>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              
+              <div className="grid grid-cols-1 gap-4">
+                <div className="col-span-2">
+                <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Commonwealth Cultural & Archaeological Assessors, LLC</h3>
+                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                  I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. Here is a gif of the homepage:
+                </p>
+                </div><Image
+                  src="/commonwealth.gif"
+                  alt="hero template"
+                  width={1000}
+                  height={1000}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+                <Image
+                  src="/commonwealth.png"
+                  alt="hero template"
+                  width={1000}
+                  height={1000}
+                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+               
+              </div>
+              <div className="grid grid-cols-1 gap-4 pt-8">
+                <div className="col-span-2">
+                <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Conflict Resolution Story Builder</h3>
+                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution...
+                </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Image
+                    src="/conflict1.gif"
+                    alt="hero template"
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                  />
+                  <Image
+                    src="/conflict2.gif"
+                    alt="hero template"
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                  />
+                 
+                </div>
+              </div>
+            </div>
+          }
+        />
+      ),
+    },
+    {
+      title: "Earlier",
+      content: (
+        
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                Before college, I worked in I.T. in a global V.C. Incubator (Triton Systems), built and sold custom PCs, and tried to learn just about every software I could get my hands on.
+              </p>
+              
+            </div>
+         
+      ),
+    },
+  ];
+  
+  return (
+    <div className="w-full">
+      <Timeline data={data} />
+      <CTASection />
+      
     </div>
   );
 }
