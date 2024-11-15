@@ -300,6 +300,8 @@ Users can edit the generated title and description, change the chart type, and a
                   height={500}
                   className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full"
                 />
+
+                
                 <Image
                   src="/chateph2.png"
                   alt="feature template"
