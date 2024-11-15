@@ -36,7 +36,7 @@ export default function Home() {
           fullContent={
             <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                Designed to research and visualize any data question, CalcGen uses a multi-agent and search retrieval system to analyze a user query, collect data from either the web or an uploaded file, and create a beautiful, interactive, and customizable visualization based on the user's request, which can then be shared or embedded anywhere with one click The tool can handle queries such as "plot the top ten financial tech companies by market cap" or "plot this data on a chart, and let me select the column to display".
+                Designed to research and visualize any data question, CalcGen uses a multi-agent and search retrieval system to analyze a user query, collect data from either the web or an uploaded file, and create a beautiful, interactive, and customizable visualization based on the user's request, which can then be shared or embedded anywhere with one click. The tool can handle queries such as "plot the top ten financial tech companies by market cap" or "plot this data on a chart, and let me select the column to display".
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -301,7 +301,7 @@ Users can edit the generated title and description, change the chart type, and a
                   className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full"
                 />
 
-                
+
                 <Image
                   src="/chateph2.png"
                   alt="feature template"
@@ -464,7 +464,7 @@ The app provides an AI-based productivity tool for college students to manage co
                 <div className="col-span-2">
                 <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Conflict Resolution Story Builder</h3>
                 <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution...
+                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution. I designed and developed an MVP that allows users to play through a collection of decision-based story games, where the user's choices result in certain outcomes with different conflict resolution scores, which are displayed in the score tracker. The game also allows users to create their own stories using an intuitive drag-and-drop decision tree building interface. The MVP was built using Next.js, Prisma, PostgreSQL, Tailwind CSS, and React Flow.
                 </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
