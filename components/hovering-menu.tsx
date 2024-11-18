@@ -2,18 +2,36 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Github, Linkedin, Mail, Twitter, Instagram, Youtube, Twitch, Facebook, Rss } from 'lucide-react'
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Instagram,
+  Youtube,
+  Twitch,
+  Facebook,
+  Rss,
+  LucideProps,
+  Phone,
+  File
+} from 'lucide-react'
 
-const icons = [
-  { icon: Github, label: 'GitHub' },
-  { icon: Linkedin, label: 'LinkedIn' },
-  { icon: Mail, label: 'Email' },
-  { icon: Twitter, label: 'Twitter' },
-  { icon: Instagram, label: 'Instagram' },
-  { icon: Youtube, label: 'YouTube' },
-  { icon: Twitch, label: 'Twitch' },
-  { icon: Facebook, label: 'Facebook' },
-  { icon: Rss, label: 'RSS' }
+interface IconItem {
+  icon: React.ForwardRefExoticComponent<Omit<LucideProps, 'ref'>>
+  label: string
+  url: string
+}
+
+const icons: IconItem[] = [
+  { icon: Phone, label: 'Phone', url: 'tel:9787997924' },
+  { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/dantegutbrod' },
+  { icon: Mail, label: 'Email', url: 'mailto:dantegutbrod@gmail.com' },
+  { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/calcgen_ai' },
+  { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/calcgen' },
+  { icon: File, label: 'Resume', url: 'https://example.com/resume.pdf' },
 ]
 
 export function HoveringMenu() {
@@ -80,9 +98,12 @@ export function HoveringMenu() {
                 animate="open"
                 exit="closed"
               >
-                {icons.map(({ icon: Icon, label }, index) => (
-                  <motion.button
+                {icons.map(({ icon: Icon, label, url }, index) => (
+                  <motion.a
                     key={index}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-white/20 text-white rounded-2xl p-6 shadow-md w-24 h-24 flex flex-col items-center justify-center hover:bg-white/20 transition-colors group relative"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -114,7 +135,7 @@ export function HoveringMenu() {
                     >
                       {label}
                     </motion.span>
-                  </motion.button>
+                  </motion.a>
                 ))}
               </motion.div>
             </motion.div>

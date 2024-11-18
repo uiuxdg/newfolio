@@ -116,7 +116,7 @@ Users can edit the generated title and description, change the chart type, and a
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                At AKALA, a 2024 Techstars edtech startup, I designed and built a new way for students to learn about the costs of adult life to better plan for their future. 
+                At AKALA, a 2024 Techstars edtech startup backed by Google and others, I designed and built a new way for students to learn about the costs of adult life to better plan for their future. 
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -230,7 +230,7 @@ Users can edit the generated title and description, change the chart type, and a
         preview={
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-            At ThinkCERCA, a Series B edtech startup, I designed a platform for teachers to gain skills to improve their curriculum design.
+            At ThinkCERCA, a Series B edtech startup, backed by the Bill Gates Foundation and others, I designed a platform for teachers to gain skills to improve their curriculum design.
           </p>
          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -501,7 +501,7 @@ The app provides an AI-based productivity tool for college students to manage co
         
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                Before college, I worked in I.T. in a global V.C. Incubator (Triton Systems), built and sold custom PCs, and tried to learn just about every software I could get my hands on.
+                Before college, I worked in I.T. in a global V.C. Incubator (Triton Systems), built and sold custom PCs, and tried to learn just about every software I could get my hands on. I also practiced nature photography and sketching in my free time.
               </p>
               
             </div>

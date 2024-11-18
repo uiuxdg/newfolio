@@ -84,9 +84,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-2xl md:text-6xl mb-4 text-black dark:text-white max-w-4xl">
           Changelog from my journey
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been designing and building products for several years. Here
-          is an overview of my journey.
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm md:max-w-xl">
+          I&apos;ve been designing and building products for several years. My approach to product design starts with obtaining a deep understanding of the problem and target user groups. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use. Here
+          are some of the highlights from my journey.
         </p>
       </div>
 
