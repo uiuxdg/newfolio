@@ -501,7 +501,7 @@ The app provides an AI-based productivity tool for college students to manage co
         
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                Before college, I worked in I.T. in a global V.C. Incubator (Triton Systems), built and sold custom PCs, and tried to learn just about every software I could get my hands on. I also practiced nature photography and sketching in my free time.
+                Before college, I worked in I.T. in a global V.C. Incubator (Triton Systems), built and sold custom PCs, and tried to learn just about every software I could get my hands on. I also practice nature photography and sketching in my free time.
               </p>
               
             </div>
