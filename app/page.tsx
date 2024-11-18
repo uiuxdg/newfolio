@@ -116,7 +116,7 @@ Users can edit the generated title and description, change the chart type, and a
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                At AKALA, a 2024 Techstars edtech startup backed by Google and others, I designed and built a new way for students to learn about the costs of adult life to better plan for their future. 
+                At AKALA, a 2024 Techstars edtech startup backed by Google and others, I designed and built a new way for young students to learn about the costs of adult life to better plan for their future. 
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
