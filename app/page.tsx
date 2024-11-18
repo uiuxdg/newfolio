@@ -13,7 +13,7 @@ export default function Home() {
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> from scratch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
+                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> independently from scratch, a new data visualization tool that uses a multi-agent AI framework to make data research, analysis, visualization, and sharing drastically easier. CalcGen had a very successful launch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -58,7 +58,7 @@ export default function Home() {
               <div className="pt-8">
 
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                CalcGen was built in Next.js, with a custom-built AI agent framework, and uses a combination of various LLMs, structured outputs, and search to answer any data question. The frontend is built with Tailwind CSS. CalcGen appeared as a trending product in prominent AI newsletters, including Rundown AI, Superhuman, and Superpower Daily, reaching over 2M total subscribers, and gaining over 1000 followers on instagram.
+                CalcGen was built in Next.js, with a custom-built AI agent framework, and uses a combination of various LLMs, structured outputs, and search to answer any data question. The frontend is styled with Tailwind CSS. CalcGen appeared as a trending product in prominent AI newsletters, including Rundown AI, Superhuman, and Superpower Daily, reaching over 2M total subscribers, and gaining over 1000 followers on instagram.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -139,7 +139,7 @@ Users can edit the generated title and description, change the chart type, and a
           fullContent={
             <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                Leading a team of graduate engineering interns from USC, I created Dreamcatcher, a 3D lifestyle calculator designed to help young people understand the different costs of various lifestyle choices in an entertaining and engaging way.
+                Leading a team of graduate interns from USC Engineering School, I created Dreamcatcher, an animated experience designed to help young people understand the different costs of various lifestyle choices in an entertaining and engaging way.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -159,7 +159,7 @@ Users can edit the generated title and description, change the chart type, and a
               </div>
               <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                AKALA Dreamcatcher was built in React, Next.js, Three.js, and GSAP, along with several other supporting JS libraries. The fully responsive web app was designed to be accessible and delightful to use on desktop, tablet, and mobile devices.
+                AKALA Dreamcatcher was built in React, Next.js, Three.js, and GSAP, along with several other supporting JS libraries. The fully responsive web app was designed to be accessible and delightful to use on desktop, tablet, and mobile devices. 
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -255,7 +255,7 @@ Users can edit the generated title and description, change the chart type, and a
         fullContent={
           <div className="pt-8">
              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-           The platform was built in Hubspot's HubLMS, and included a series of interactive, gamified modules. Prototyping was done in Figma. Working with a team of 4, including a product manager, content writer, and Hubspot expert, I was responsible for the design and development of the platform, including the creation of the course structure, the visual design of the interactive modules, and the user experience.
+           The platform was built in Hubspot's HubLMS, and included a series of interactive, gamified modules. Prototyping was done in Figma. Working with a team of 4, including a project manager, content writer, and Hubspot expert, I was responsible for the design and development of the platform, including the creation of the course structure, the visual design of the interactive modules, and the user experience.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Image
@@ -275,7 +275,7 @@ Users can edit the generated title and description, change the chart type, and a
 
           </div>
           <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
-          Before development began, I completed a comprehensive UX research and competitive analysis study on leading edtech companies in the space. The research was used to inform the design of the platform, and the final product was a success, being used by over 1200 teachers in the 2023-2024 school year.
+          Before development began, I completed a comprehensive UX research and competitive analysis study on leading edtech products in the space. The research was used to inform the design of the platform, and the final product was a success, being used by over 1200 teachers in the 2023-2024 school year.
           </p>
 
           </div>
@@ -290,7 +290,7 @@ Users can edit the generated title and description, change the chart type, and a
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                At Williams, I cofounded a startup that used AI to help students effectively manage their syllabi, assignments, and notes. We were among the top 4 winners of the 2023 Williams College Pitch Competition. As a student, I also completed extensive coursework in Cognitive Science, Theoretical AI, UX Design, and Computer Science.
+                At Williams, I cofounded a startup that used AI to help students effectively manage their syllabi, assignments, and notes. We were among the 4 winners of the 2023 Williams College Pitch Competition who recieved funding to develop our product. As a student, I also completed extensive coursework in Cognitive Science, Theoretical AI, UX Design, and Computer Science.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -368,7 +368,7 @@ The app provides an AI-based productivity tool for college students to manage co
           fullContent={
             <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
-              As the lead UI/UX designer, I spearheaded the design of a comprehensive mobile app tailored to the needs of athletes, coaches, and administrators within BTSNE. My responsibilities encompassed creating an interactive, high-fidelity prototype in Figma, designing an animated graphic logo for the app's loading screen, and developing a user-friendly design system aligned with BTSNE's brand identity. I worked in close collaboration with the CEO and the development team to ensure the design solutions were technically feasible and aligned with the organization's mission.              </p>
+              As the lead UI/UX designer, I spearheaded the design of a comprehensive mobile app tailored to the needs of athletes, coaches, and administrators within BTSNE. My responsibilities encompassed creating preliminary user flows and personas, creating an interactive, high-fidelity prototype in Figma, designing an animated graphic logo for the app's loading screen, and developing a user-friendly design system aligned with BTSNE's brand identity. I worked in close collaboration with the CEO and the development team to ensure the design solutions were technically feasible and aligned with the organization's mission.              </p>
               <div className="grid grid-cols-1 gap-4">
                 <Image
                   src="/bts8.png"
@@ -418,12 +418,12 @@ The app provides an AI-based productivity tool for college students to manage co
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                Working independently, I built websites and designed apps for local businesses, and taught myself how to design and code. Here are some highlights:
+                Working independently, I built websites and designed apps for local businesses, and taught myself user experience design and full-stack web development. Here are some highlights:
               </p>
             
               <div className="grid grid-cols-1 gap-4">
                 <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Together Roasters Mobile App</h3>
-                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">I designed a mobile app for a local coffee shop using Figma. Here are the screens from the prototype:</p>
+                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">I designed a mobile app for a local coffee shop using Figma. The app allows users to browse offerings, place orders, and save favorites for future orders. Here are the screens from the prototype:</p>
                 <Image
                   src="/tr1.png"
                   alt="hero template"
@@ -444,7 +444,7 @@ The app provides an AI-based productivity tool for college students to manage co
                     Commonwealth Cultural & Archaeological Assessors, LLC
                   </h3>
                   <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. Here is a gif of the homepage:
+                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. They requested a traditional, basic yet modern design language that outlined their core services. I settled on a palette of warm, earthy colors, a clean sans-serif font, and a simple, content-focused layout, with a few subtle animations to keep the user engaged. Here is a gif of the homepage:
                   </p>
                 </div>
                 
@@ -469,7 +469,7 @@ The app provides an AI-based productivity tool for college students to manage co
                 <div className="col-span-2">
                 <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Conflict Resolution Story Builder</h3>
                 <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution. I designed and developed an MVP that allows users to play through a collection of decision-based story games, where the user's choices result in certain outcomes with different conflict resolution scores, which are displayed in the score tracker. The game also allows users to create their own stories using an intuitive drag-and-drop decision tree building interface. The MVP was built using Next.js, Prisma, PostgreSQL, Tailwind CSS, and React Flow.
+                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution. After working with them to refine the idea, I designed and developed an MVP that allows users to play through a collection of decision-based story games, where the user's choices result in certain outcomes with different conflict resolution scores, which are displayed in the score tracker. The game helps students think through difficult conversations and situations, in order to help them develop the skills to resolve interpersonal conflicts effectively. The game also allows users to create their own stories using an intuitive drag-and-drop decision tree building interface. The MVP was built using React, Next JS, Tailwind CSS, and React Flow for the frontend, and Prisma/PostgreSQL for the backend. The app received positive feedback from beta users, who enjoyed the intuitive, animated interface, and the ability to create their own stories.
                 </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
