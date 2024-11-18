@@ -13,13 +13,19 @@ export default function Component() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "10% start"],
+    offset: ["start 80%", "start 50%"],
   })
 
   const smoothProgress = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
   })
+
+  const buttonColor = useTransform(
+    smoothProgress,
+    [0.8, 1],
+    ["#1E40AF44", "#3B82F6"]
+  )
 
   useEffect(() => {
     if (tracingPathLeftRef.current) {
@@ -38,11 +44,11 @@ export default function Component() {
   return (
     <section
       ref={containerRef}
-      className="w-full bg-gradient-to-br from-background to-muted py-40 relative overflow-hidden"
+      className="w-full bg-gradient-to-br from-background to-muted h-[80vh] flex pb-40 md:pb-32 items-center justify-center relative overflow-hidden"
     >
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
-        viewBox="0 0 1440 800"
+        viewBox="0 0 1440 600"
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid slice"
       >
@@ -56,7 +62,7 @@ export default function Component() {
         </defs>
         <motion.path
           ref={tracingPathLeftRef}
-          d="M 0 800 Q 400 700 720 600"
+          d="M 0 500 Q 400 400 720 300"
           fill="none"
           stroke={lineColor}
           strokeWidth="2"
@@ -65,7 +71,7 @@ export default function Component() {
         />
         <motion.path
           ref={tracingPathRightRef}
-          d="M 1440 800 Q 1040 700 720 600"
+          d="M 1440 500 Q 1040 400 720 300"
           fill="none"
           stroke={lineColor}
           strokeWidth="2"
@@ -91,12 +97,13 @@ export default function Component() {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
             <motion.a
-              href="mailto:dantegutbrod@gmail.com"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors relative group"
+              href="#"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-primary-foreground font-medium transition-colors relative group"
+              style={{ backgroundColor: buttonColor }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="relative z-10">
+              <span className="relative text-white z-10">
                 Message me
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </span>
