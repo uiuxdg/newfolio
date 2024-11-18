@@ -215,7 +215,7 @@ Users can edit the generated title and description, change the chart type, and a
           fullContent={
             <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                My work included a literature review, a survey, and a series of experiments testing the effects of different digital learning interfaces on cognitive load. My findings supported the idea that factors including the amount of information displayed, the amount of time spent on each page, and the modalities of information all play a role in how much cognitive load is experienced, and that measured cognitive load correlates with retention and recall.
+                My work included a literature review, a survey, and a series of experiments testing the effects of different digital learning interfaces on cognitive load. My findings supported the idea that factors including the amount of information displayed, the amount of time spent on each page, and the modalities of information all play a role in how much cognitive load is experienced, and that measured cognitive load negatively correlates with retention and recall.
               </p>
              
             </div>
@@ -439,26 +439,31 @@ The app provides an AI-based productivity tool for college students to manage co
             <div className="pt-8">
               
               <div className="grid grid-cols-1 gap-4">
-                <div className="col-span-2">
-                <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Commonwealth Cultural & Archaeological Assessors, LLC</h3>
-                <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                  I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. Here is a gif of the homepage:
-                </p>
-                </div><Image
-                  src="/commonwealth.gif"
-                  alt="hero template"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                />
-                <Image
-                  src="/commonwealth.png"
-                  alt="hero template"
-                  width={1000}
-                  height={1000}
-                  className="rounded-lg object-cover h-36 md:h-48 lg:h-64 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                />
-               
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">
+                    Commonwealth Cultural & Archaeological Assessors, LLC
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. Here is a gif of the homepage:
+                  </p>
+                </div>
+                
+                <div className="flex flex-col gap-4">
+                  <Image
+                    src="/commonwealth.gif"
+                    alt="Commonwealth Cultural homepage animation"
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg object-cover w-full h-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                  />
+                  <Image
+                    src="/commonwealth.png"
+                    alt="Commonwealth Cultural homepage screenshot"
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg object-cover w-full h-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                  />
+                </div>
               </div>
               <div className="grid grid-cols-1 gap-4 pt-8">
                 <div className="col-span-2">
