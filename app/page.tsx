@@ -13,7 +13,7 @@ export default function Home() {
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> independently from scratch, a new data visualization tool that uses a multi-agent AI framework to make data research, analysis, visualization, and sharing drastically easier. CalcGen had a very successful launch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
+                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> independently from scratch, a new data visualization tool that uses a multi-agent AI framework to make data research, analysis, visualization, and sharing take seconds instead of hours. CalcGen had a very successful launch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -102,7 +102,30 @@ export default function Home() {
 <div className="pt-8">
 
 <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-Users can edit the generated title and description, change the chart type, and apply any of 40+ provided themes to their creation. They can also access our showcase of community creations made publicly available for inspiration. Creations can be shared as a link, or embedded into any website, or tools such as Notion, Miro, Google Classroom, Shopify, and more.</p></div>
+Users can edit the generated title and description, change the chart type, and apply any of 40+ provided themes to their creation. They can also access our showcase of community creations made publicly available for inspiration. Creations can be shared as a link, or embedded into any website, or tools such as Notion, Miro, Google Classroom, Shopify, and more.</p>
+<p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+Technologies used:
+<ul className="list-disc list-inside">
+<li>React</li>
+<li>Next JS</li>
+  <li>Typescript</li>
+  <li>Tailwind CSS</li>
+  <li>Chart.js</li>
+  <li>Perplexity Sonar API</li>
+  <li>OpenAI API</li>
+  <li>Zod</li>
+  <li>Nextauth</li>
+  <li>Prisma</li>
+  <li>Neon Serverless PostgresSQL</li>
+  <li>Stripe Payments API</li>
+  <li>Resend Email API</li>
+  <li>Firebase Cloud Functions</li>
+  <li>Markdown</li>
+  <li>Figma for design</li>
+  <li>Some other tools</li>
+</ul>
+</p>
+</div>
 
             </div>
           }
@@ -368,7 +391,7 @@ The app provides an AI-based productivity tool for college students to manage co
           fullContent={
             <div className="pt-8">
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
-              As the lead UI/UX designer, I spearheaded the design of a comprehensive mobile app tailored to the needs of athletes, coaches, and administrators within BTSNE. My responsibilities encompassed creating preliminary user flows and personas, creating an interactive, high-fidelity prototype in Figma, designing an animated graphic logo for the app's loading screen, and developing a user-friendly design system aligned with BTSNE's brand identity. I worked in close collaboration with the CEO and the development team to ensure the design solutions were technically feasible and aligned with the organization's mission.              </p>
+              As the lead UI/UX designer, I spearheaded the design of a comprehensive mobile app tailored to the needs of athletes, coaches, and administrators within BTSNE. My responsibilities encompassed creating preliminary user flows and personas, creating an interactive, high-fidelity prototype in Figma, designing an animated graphic logo for the app's loading screen, and developing a user-friendly design system aligned with BTSNE's brand identity. I worked in close collaboration with the CEO and the development team to ensure the design solutions were technically feasible and aligned with the organization's mission. The design was recieved well by stakeholders, and contributed to our fundraising campaign exceeding our goal by $80,000.              </p>
               <div className="grid grid-cols-1 gap-4">
                 <Image
                   src="/bts8.png"
@@ -444,9 +467,10 @@ The app provides an AI-based productivity tool for college students to manage co
                     Commonwealth Cultural & Archaeological Assessors, LLC
                   </h3>
                   <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
-                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. They requested a traditional, basic yet modern design language that outlined their core services. I settled on a palette of warm, earthy colors, a clean sans-serif font, and a simple, content-focused layout, with a few subtle animations to keep the user engaged. Here is a gif of the homepage:
+                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. They requested a traditional, basic yet modern design language that outlined their core services. I settled on a palette of warm, earthy colors, a clean sans-serif font, and a simple, content-focused layout, with a few subtle scroll and hover animations to keep the user engaged. Here is a gif of the homepage:
                   </p>
                 </div>
+                
                 
                 <div className="flex flex-col gap-4">
                   <Image
@@ -464,7 +488,30 @@ The app provides an AI-based productivity tool for college students to manage co
                     className="rounded-lg object-cover w-full h-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
                 </div>
+              </div> 
+              
+              <div className="grid grid-cols-1 gap-4 pt-8">
+              <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">
+                    3D Mockup Generator for Mobile Product Screenshots
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
+                    I built a tool to generate 3D mockups of mobile apps for use in design portfolios or marketing presentations. The tool was built using React, Three.js, and Firebase for file uploads. It allows users to upload an image of their mobile app, and then generate and download a PNG of the 3D device with a variety of customization options. Here is a gif of the tool in action:
+                  </p>
+                </div>
+                
+                <div className="flex flex-col gap-4">
+                  <Image
+                    src="/mockup.gif"
+                    alt="3D mockup generator for mobile product screenshots"
+                    width={1000}
+                    height={1000}
+                    className="rounded-lg object-cover w-full h-auto shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                  />
+              
               </div>
+
+              
+              
               <div className="grid grid-cols-1 gap-4 pt-8">
                 <div className="col-span-2">
                 <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">Conflict Resolution Story Builder</h3>

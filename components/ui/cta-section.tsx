@@ -97,7 +97,7 @@ export default function Component() {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-8 justify-center">
             <motion.a
-              href="mailto:dantegutbrod@gmail.com"
+                href="mailto:dantegutbrod@gmail.com"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg text-primary-foreground font-medium transition-colors relative group"
               style={{ backgroundColor: buttonColor }}
               whileHover={{ scale: 1.05 }}
