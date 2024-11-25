@@ -55,7 +55,7 @@ export function HoveringMenu() {
   }, [isOpen])
 
   return (
-    <div className="fixed top-4 left-4 z-50">
+    <div className="fixed top-4 left-4 z-[2000]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800"
@@ -70,12 +70,14 @@ export function HoveringMenu() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/60 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-          >
+          >              <div className="text-white absolute top-20 text-2xl font-bold text-center mb-6">
+                Dante Gutbrod
+              </div>
             <motion.div
               ref={menuRef}
               className="bg-slate-800/0 rounded-lg p-8"
@@ -84,6 +86,7 @@ export function HoveringMenu() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
+
               <motion.div
                 className="grid grid-cols-3 gap-6"
                 variants={{

@@ -6,6 +6,7 @@ import {
   motion,
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { CursorBlob } from "@/components/ui/cursor-blob";
 
 interface TimelineEntry {
   title: string;
@@ -77,16 +78,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 md:px-10 relative"
+      className="w-full z-[1000] bg-white dark:bg-neutral-950 md:px-10 relative"
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-2xl md:text-6xl mb-4 text-black dark:text-white max-w-4xl">
-          Changelog from my journey
+      <CursorBlob />
+      <div className="max-w-7xl h-screen flex flex-col justify-center items-center mx-auto py-20 px-4 md:px-8 lg:px-10">
+        <h2 className="text-4xl text-balance text-center md:text-6xl mb-8 text-black dark:text-white max-w-4xl">
+          I am a product designer and developer.
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm md:max-w-xl">
-          I&apos;ve been designing and building products for several years. My approach to product design starts with obtaining a deep understanding of the problem and target user groups. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use. Here
-          are some of the highlights from my journey.
+        <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
+          I&apos;ve been designing and building digital products for several years.
+        </p>
+        <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
+          My approach to product design starts with obtaining a deep understanding of the problem and target user groups. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use.
+        </p>   <p className="text-neutral-700 mb-4 text-center dark:text-neutral-300 text-lg font-bold md:text-base max-w-sm md:max-w-xl">
+          Here are some of the highlights from my journey.
         </p>
       </div>
 
@@ -140,7 +146,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent rounded-full"
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-green-500 via-blue-500 to-transparent rounded-full"
           />
           {/* New Horizontal Edge */}
           <motion.div
@@ -148,7 +154,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               width: useTransform(edgeProgress, [0, 1], ["0%", "100%"]),
               opacity: edgeProgress,
             }}
-            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-l from-purple-500 via-blue-500 to-transparent"
+            className="absolute bottom-0 left-0 h-[2px] bg-gradient-to-l from-green-500 via-blue-500 to-transparent"
           />
         </div>
       </div>

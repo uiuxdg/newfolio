@@ -22,11 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lato.className} antialiased`}>
+      <body className={`${lato.className} antialiased relative`}>
         <ThemeProvider>
-          <ThemeToggle />
-          <HoveringMenu />
-          {children}
+          <div className="relative z-10">
+                     
+
+            <ThemeToggle />
+            <HoveringMenu />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>

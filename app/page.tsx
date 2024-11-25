@@ -4,10 +4,11 @@ import CTASection from "@/components/ui/cta-section";
 import Image from "next/image";
 import { CollapsibleContent } from "@/components/ui/collapsible-content";
 
+
 export default function Home() {
   const data = [
     {
-      title: "Fall 2024",
+      title: "Interactive Charts with AI",
       content: (
         <CollapsibleContent
           preview={
@@ -133,7 +134,7 @@ Technologies used:
       ),
     },
     {
-      title: "Spring 2024",
+      title: "Personal Finance for Young Students",
       content: (
         <CollapsibleContent
           preview={
@@ -209,7 +210,7 @@ Technologies used:
       ),
     },
     {
-      title: "January 2024",
+      title: "Cognitive Load and Multimedia Learning",
       content: (
         <CollapsibleContent
           preview={
@@ -247,7 +248,7 @@ Technologies used:
       ),
     },
     {
-      title: "Summer 2023",
+      title: "Curriculum Design Platform for Teachers",
       content: (
         <CollapsibleContent
         preview={
@@ -307,7 +308,7 @@ Technologies used:
       ),
     },
     {
-      title: "Spring 2023",
+      title: "AI Course Management for Universities",
       content: (
         <CollapsibleContent
           preview={
@@ -361,7 +362,7 @@ The app provides an AI-based productivity tool for college students to manage co
       ),
     },
     {
-      title: "2022",
+      title: "Scheduling and Accountability for Sports Teams",
       content: (
         <CollapsibleContent
           preview={
