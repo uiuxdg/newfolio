@@ -113,7 +113,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 />
               </div>
               <motion.h3 
-                className={`hidden md:block text-2xl md:pl-20 md:text-5xl font-bold ${
+                className={`hidden md:block text-2xl md:pl-20 md:text-4xl text-balance font-bold ${
                   activeIndex === index 
                     ? 'text-black dark:text-white' 
                     : 'text-neutral-500 dark:text-neutral-500'

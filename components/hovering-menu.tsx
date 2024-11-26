@@ -29,9 +29,9 @@ const icons: IconItem[] = [
   { icon: Phone, label: 'Phone', url: 'tel:9787997924' },
   { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/dantegutbrod' },
   { icon: Mail, label: 'Email', url: 'mailto:dantegutbrod@gmail.com' },
-  { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/calcgen_ai' },
-  { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/calcgen' },
-  { icon: File, label: 'Resume', url: 'https://example.com/resume.pdf' },
+  // { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/calcgen_ai' },
+  // { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/calcgen' },
+ { icon: File, label: 'Resume', url: 'https://example.com/resume.pdf' },
 ]
 
 export function HoveringMenu() {
@@ -55,7 +55,7 @@ export function HoveringMenu() {
   }, [isOpen])
 
   return (
-    <div className="fixed top-4 left-4 z-[2000]">
+    <div className="fixed top-4 left-4 z-[5000]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800"
@@ -75,7 +75,7 @@ export function HoveringMenu() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-          >              <div className="text-white absolute top-20 text-2xl font-bold text-center mb-6">
+          >              <div className="text-white text-2xl font-bold text-center mb-6">
                 Dante Gutbrod
               </div>
             <motion.div
@@ -88,7 +88,7 @@ export function HoveringMenu() {
             >
 
               <motion.div
-                className="grid grid-cols-3 gap-6"
+                className="grid grid-cols-2 gap-6"
                 variants={{
                   open: {
                     transition: { staggerChildren: 0.05, delayChildren: 0.1 }
