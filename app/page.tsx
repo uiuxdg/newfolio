@@ -203,7 +203,7 @@ Technologies used:
               </div>
               </div>
 
-              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal my-8">
 Technologies used:
 <ul className="list-disc list-inside">
 <li>React</li>
