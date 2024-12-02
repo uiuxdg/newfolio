@@ -140,7 +140,7 @@ Technologies used:
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
-                At AKALA, a 2024 Techstars edtech startup backed by Google and others, I designed and built a new way for young students to learn about the costs of adult life to better plan for their future. 
+                At AKALA, a 2024 Techstars edtech startup backed by Google and other institutional investors, I designed and built a new way for young students to learn about the costs of adult life to better plan for their future. 
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image
@@ -433,6 +433,30 @@ The app provides an AI-based productivity tool for college students to manage co
                 />
                
               </div>
+              <div className="grid grid-cols-2 gap-4">
+                <Image
+                  src="/bts9.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg col-span-full object-contain  w-full"
+                />
+                                <Image
+                  src="/bts10.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-contain  w-full"
+                />
+                                <Image
+                  src="/bts11.png"
+                  alt="bento template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-contain  w-full"
+                />
+               
+              </div>
               <div className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
                 <h3 className="font-bold pt-4">Interactive Figma Prototype:</h3>
                 <p>Utilizing Figma, I designed a high-fidelity prototype that allowed stakeholders to experience and interact with the app's design before development began. This process facilitated early feedback and iterative improvements, ensuring the final design met user needs effectively.</p>
@@ -543,7 +567,7 @@ The app provides an AI-based productivity tool for college students to manage co
 
               <div className="grid grid-cols-1 gap-4 pt-8">
               <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-bold">
-                    Website Concepts
+                    Experimental Website Concepts
                   </h3>
                   <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-4">
 Interactive virtual art gallery                 </p>

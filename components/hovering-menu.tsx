@@ -58,7 +58,7 @@ export function HoveringMenu() {
     <div className="fixed top-4 left-4 z-[5000]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800"
+        className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:scale-105 transition-all duration-300"
       >
         {isOpen ? (
           <X className="h-5 w-5" />

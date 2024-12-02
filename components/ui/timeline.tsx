@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { CursorBlob } from "@/components/ui/cursor-blob";
+import { ChevronDown } from "lucide-react";
 
 interface TimelineEntry {
   title: string;
@@ -90,10 +91,58 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           I&apos;ve been designing and building digital products for several years.
         </p>
         <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
-          My approach to product design starts with obtaining a deep understanding of the problem and target user groups. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use.
-        </p>   <p className="text-neutral-700 mb-4 text-center dark:text-neutral-300 text-lg font-bold md:text-base max-w-sm md:max-w-xl">
+          My approach to product design starts with obtaining a deep understanding of the problem and target user groups through research. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use.
+        </p>   
+        <p className="text-neutral-700 mb-4 text-center dark:text-neutral-300 text-lg font-bold md:text-base max-w-sm md:max-w-xl">
           Here are some of the highlights from my journey.
         </p>
+        <div className="relative backdrop-blur-xl">
+          <span className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+            <span className="text-black dark:text-white text-lg font-bold flex items-center">
+              Continue
+              <motion.div
+                animate={{ y: [0, 5, 0] }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <ChevronDown className="h-5 w-5 ml-2" />
+              </motion.div>
+            </span>
+          </span>
+
+          <motion.div
+            style={{ 
+              position: 'relative',
+              borderRadius: '8px',
+              padding: '2px',
+              background: 'linear-gradient(30deg, rgb(59, 130, 246), rgb(134, 239, 172, 30%), rgb(59, 130, 246))',
+              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+              WebkitMaskComposite: 'xor',
+              maskComposite: 'exclude',
+            }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="z-10"
+          >
+            <button
+              onClick={() => {
+                const firstEntry = document.querySelector('.timeline-entry');
+                if (firstEntry) {
+                  firstEntry.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="relative flex items-center justify-center gap-2 bg-background rounded-[7px] px-12 py-3 w-full"
+            >
+              <span className="opacity-0 text-lg font-bold">
+                Continue
+              </span>
+              <ChevronDown className="absolute right-4 h-5 w-5" />
+            </button>
+          </motion.div>
+        </div>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">

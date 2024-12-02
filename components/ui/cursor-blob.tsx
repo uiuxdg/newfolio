@@ -141,9 +141,9 @@ export function CursorBlob() {
 
         if (x >= 0 && x < image.width && y >= 0 && y < image.height) {
           const px_idx = y * img_stride + x * img_channels
-          image.data[px_idx + 0] = 64 // Red
-          image.data[px_idx + 1] = 64 // Green
-          image.data[px_idx + 2] = 64 // Blue
+          image.data[px_idx + 0] = 96 // Red
+          image.data[px_idx + 1] = 96 // Green
+          image.data[px_idx + 2] = 96 // Blue
           image.data[px_idx + 3] = 255 // Alpha
         }
       }
