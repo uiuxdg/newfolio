@@ -30,7 +30,7 @@ export function CollapsibleContent({ preview, fullContent }: CollapsibleContentP
       </AnimatePresence>
       <div className="relative backdrop-blur-xl">
         <span className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <span className="text-black dark:text-white text-lg font-bold flex items-center">
+          <span className="text-black dark:text-white text-lg font-bold flex items-center gap-2">
             {isExpanded ? "Show less" : "Read more"}
             <motion.div
               animate={{ 
@@ -48,7 +48,7 @@ export function CollapsibleContent({ preview, fullContent }: CollapsibleContentP
                 }
               }}
             >
-              <ChevronDown className="h-5 w-5 ml-2" />
+              <ChevronDown className="h-5 w-5" />
             </motion.div>
           </span>
         </span>
