@@ -202,6 +202,29 @@ Technologies used:
                 />
               </div>
               </div>
+
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-md font-normal mb-8">
+Technologies used:
+<ul className="list-disc list-inside">
+<li>React</li>
+<li>Next JS</li>
+  <li>Typescript</li>
+  <li>Three JS</li>
+  <li>OpenGL/GLSL</li>
+  <li>Blender</li>
+  <li>GSAP</li>
+  <li>Tailwind CSS</li>
+  <li>Redux State Management</li>
+  <li>Chart.js</li>
+  <li>Nextauth</li>
+  <li>Prisma</li>
+  <li>Neon Serverless PostgresSQL</li>
+  <li>Stripe Payments API</li>
+  <li>Figma for design</li>
+</ul>
+</p>
+
+
             </div>
             
             
