@@ -31,7 +31,7 @@ const icons: IconItem[] = [
   { icon: Mail, label: 'Email', url: 'mailto:dantegutbrod@gmail.com' },
   // { icon: Twitter, label: 'Twitter', url: 'https://twitter.com/calcgen_ai' },
   // { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/calcgen' },
- { icon: File, label: 'Resume', url: 'https://example.com/resume.pdf' },
+ { icon: File, label: 'Resume', url: 'https://drive.google.com/file/d/1EWHGHqRqIKr2MIgAP2sW2iKy4oFgXw-i/view?usp=sharing' },
 ]
 
 export function HoveringMenu() {
