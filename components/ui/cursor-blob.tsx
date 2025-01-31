@@ -178,7 +178,21 @@ export function CursorBlob() {
       mouse_y = e.clientY
     }
 
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault() // Prevent scrolling while touching
+      const touch = e.touches[0]
+      if (touch) {
+        mouse_x = touch.clientX
+        mouse_y = touch.clientY
+      }
+    }
+
     const handleMouseLeave = () => {
+      mouse_x = null
+      mouse_y = null
+    }
+
+    const handleTouchEnd = () => {
       mouse_x = null
       mouse_y = null
     }
@@ -186,6 +200,9 @@ export function CursorBlob() {
     window.addEventListener('resize', handleResize)
     document.addEventListener('mousemove', handleMouseMove)
     document.addEventListener('mouseleave', handleMouseLeave)
+    document.addEventListener('touchmove', handleTouchMove, { passive: false })
+    document.addEventListener('touchend', handleTouchEnd)
+    document.addEventListener('touchcancel', handleTouchEnd)
 
     const intervalId = setInterval(frameCallback, 1000 / 60)
 
@@ -193,6 +210,9 @@ export function CursorBlob() {
       window.removeEventListener('resize', handleResize)
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseleave', handleMouseLeave)
+      document.removeEventListener('touchmove', handleTouchMove)
+      document.removeEventListener('touchend', handleTouchEnd)
+      document.removeEventListener('touchcancel', handleTouchEnd)
       clearInterval(intervalId)
       container.removeChild(canvas)
     }
