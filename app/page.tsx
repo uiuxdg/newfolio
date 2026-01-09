@@ -8,6 +8,255 @@ import { CollapsibleContent } from "@/components/ui/collapsible-content";
 export default function Home() {
   const data = [
     {
+      title: "Commonwealth Cultural & Archaeological Assessors, LLC",
+      content: (
+        <CollapsibleContent
+          preview={
+            <div>
+              <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
+                Selected engineering and GIS work including QGIS automation tooling, USGS TNM API integration, computer-vision assisted georeferencing research, LiDAR/DEM processing workflows, a geotagged field data collection app, internal storage infrastructure, document automation, and automated cartographic production.
+              </p>
+            </div>
+          }
+          fullContent={
+            <div className="pt-8">
+              <div className="grid grid-cols-1 gap-6">
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Geospatial Automation & QGIS Tooling
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I developed custom geospatial automation tools in QGIS to support archaeological survey design and spatial analysis. This work included Python scripts and processing models to generate rotated survey grids, derive rectangles from rotated point sets, enforce dimensional and spatial constraints, and automatically populate attributes and labels. These tools reduced manual GIS editing, ensured spatial consistency across projects, and enabled rapid reconfiguration when survey parameters changed.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>QGIS (3.x)</li>
+                      <li>Python (PyQGIS API)</li>
+                      <li>QGIS Processing Models</li>
+                      <li>Vector geometry operations</li>
+                      <li>Coordinate transformations &amp; rotation math</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Historical Map Retrieval & USGS API Integration
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I designed and implemented a custom QGIS plugin that integrates directly with the USGS The National Map (TNM) Access API to search for, filter, and download Historical Topographic Map Collection (HTMC) GeoTIFFs based on the current map canvas extent. The plugin automates API querying, spatial filtering, batch downloads, and raster ingestion, allowing historical basemaps to be assembled entirely within QGIS.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>Python</li>
+                      <li>PyQGIS</li>
+                      <li>USGS TNM Access API</li>
+                      <li>REST API requests</li>
+                      <li>GeoTIFF raster handling</li>
+                      <li>QGIS plugin framework</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Automated Georeferencing & Computer Vision Research
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I prototyped an automated, content-based georeferencing workflow for historical maps based on current academic research. This work explored feature matching using roads, coastlines, and buildings, as well as OCR-derived place names to improve alignment accuracy. The goal was to reduce manual control-point placement and enable scalable georeferencing across large historical map collections.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>Python</li>
+                      <li>OpenCV (feature detection &amp; matching)</li>
+                      <li>OCR pipelines (text extraction from map imagery)</li>
+                      <li>Spatial transformation algorithms</li>
+                      <li>Academic computer-vision methodologies</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    LiDAR & DEM Processing Workflows
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I built repeatable GIS workflows for processing LiDAR-derived DEMs, including raster reprojection, contour generation at fine intervals, terrain analysis, and cartographic optimization. These workflows were scripted and standardized to ensure consistent outputs across projects and to reduce processing time for high-resolution terrain products used in archaeological sensitivity modeling.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>QGIS</li>
+                      <li>GDAL</li>
+                      <li>Raster analysis tools</li>
+                      <li>LiDAR-derived DEMs</li>
+                      <li>Automated cartographic layout workflows</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Geotagged Field Photo & STP Data Collection Application
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I designed and built a web-based field data collection application to support archaeological documentation at Commonwealth Cultural &amp; Archaeological Assessors. In addition to geotagged photo capture and mapping, the app supports structured shovel test pit (STP) data entry, including stratigraphy, depths, soil descriptions, and observations. The system automatically generates standardized STP profile graphics from entered data, ensuring consistent visual outputs for reporting. Field photos, STP records, and generated graphics are spatially linked and exportable for direct integration into GIS and regulatory reports, reducing transcription errors and significantly accelerating post-fieldwork processing.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>JavaScript</li>
+                      <li>React</li>
+                      <li>Next JS</li>
+                      <li>CSS</li>
+                      <li>PostgreSQL</li>
+                      <li>PostGIS</li>
+                      <li>Leaflet</li>
+                      <li>EXIF GPS metadata extraction</li>
+                      <li>Structured form-based data collection</li>
+                      <li>Programmatic SVG/Canvas-based graphic generation</li>
+                      <li>Client-side geospatial visualization</li>
+                      <li>Data export for GIS and report integration</li>
+                    </ul>
+                  </div>
+                  <div className="pt-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <Image
+                        src="/geotag1.png"
+                        alt="Geotagged field photo app - screen 1"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag2.png"
+                        alt="Geotagged field photo app - screen 2"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag3.png"
+                        alt="Geotagged field photo app - screen 3"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag4.png"
+                        alt="Geotagged field photo app - screen 4"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag5.png"
+                        alt="Geotagged field photo app - screen 5"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag6.png"
+                        alt="Geotagged field photo app - screen 6"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                      <Image
+                        src="/geotag7.png"
+                        alt="Geotagged field photo app - screen 7"
+                        width={1000}
+                        height={1000}
+                        className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Server Infrastructure & Data Management Systems
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I designed and maintained CCAA’s internal data infrastructure to support large geospatial datasets, imagery, and long-term project archives. This included configuring storage pools, snapshot replication, external drive workflows, and network access to support both active GIS work and regulatory data retention requirements.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>TrueNAS SCALE</li>
+                      <li>ZFS storage &amp; snapshot replication</li>
+                      <li>SMB / network file sharing</li>
+                      <li>External drive &amp; backup workflows</li>
+                      <li>Local network configuration</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Document Automation & Report Template Engineering
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I developed advanced Microsoft Word templates and VBA macros to automate archaeological report production. These templates support dynamic section hiding, automatic renumbering, synchronized tables of contents, and clean PDF export without duplicating content across documents. The system reduced formatting time and prevented numbering and layout errors in regulatory submissions.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>Microsoft Word</li>
+                      <li>VBA (Visual Basic for Applications)</li>
+                      <li>Dynamic styles &amp; heading hierarchies</li>
+                      <li>Automated TOC and numbering logic</li>
+                      <li>PDF export workflows</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    GIS-Driven Visualization & Automated Map Production
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I implemented automated map layout and export workflows in QGIS, including atlas-based layouts, rotated extents, standardized figure generation, and dynamic callouts. These workflows ensured that figures remained synchronized with spatial data throughout project revisions, reducing rework and improving consistency in final deliverables.
+                  </p>
+                  <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
+                    <span className="font-bold">Tools &amp; Technologies:</span>
+                    <ul className="list-disc list-inside">
+                      <li>QGIS Print Layout &amp; Atlas</li>
+                      <li>Python (PyQGIS)</li>
+                      <li>Dynamic labeling &amp; callouts</li>
+                      <li>Batch map export pipelines</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Commonwealth Cultural &amp; Archaeological Assessors Website
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I designed and built a company landing page and website for CCAA
+                    . They requested a traditional, basic yet modern design language that reflected their core services. I settled on a palette of warm, earthy colors, a clean sans-serif font, and a simple, content-focused layout, with a few subtle scroll and hover animations to keep the user engaged. Here is a gif of the homepage:
+                  </p>
+                  <div className="flex flex-col gap-4">
+                    <Image
+                      src="/commonwealth.gif"
+                      alt="Commonwealth Cultural homepage animation"
+                      width={1000}
+                      height={1000}
+                      className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                    />
+                    <Image
+                      src="/commonwealth.png"
+                      alt="Commonwealth Cultural homepage screenshot"
+                      width={1000}
+                      height={1000}
+                      className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        />
+      ),
+    },
+    {
       title: "Interactive Charts with AI",
       content: (
         <CollapsibleContent
@@ -123,28 +372,28 @@ export default function Home() {
 
 <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
 Users can edit the generated title and description, change the chart type, and apply any of 40+ provided themes to their creation. They can also access our showcase of community creations made publicly available for inspiration. Creations can be shared as a link, or embedded into any website, or tools such as Notion, Miro, Google Classroom, Shopify, and more.</p>
-<p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
-Technologies used:
-<ul className="list-disc list-inside">
-<li>React</li>
-<li>Next JS</li>
-  <li>Typescript</li>
-  <li>Tailwind CSS</li>
-  <li>Chart.js</li>
-  <li>Perplexity Sonar API</li>
-  <li>OpenAI API</li>
-  <li>Zod</li>
-  <li>Nextauth</li>
-  <li>Prisma</li>
-  <li>Neon Serverless PostgresSQL</li>
-  <li>Stripe Payments API</li>
-  <li>Resend Email API</li>
-  <li>Firebase Cloud Functions</li>
-  <li>Markdown</li>
-  <li>Figma for design</li>
-  <li>Some other tools</li>
-</ul>
-</p>
+<div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
+  <span className="font-bold">Technologies used:</span>
+  <ul className="list-disc list-inside mt-2">
+    <li>React</li>
+    <li>Next JS</li>
+    <li>Typescript</li>
+    <li>Tailwind CSS</li>
+    <li>Chart.js</li>
+    <li>Perplexity Sonar API</li>
+    <li>OpenAI API</li>
+    <li>Zod</li>
+    <li>Nextauth</li>
+    <li>Prisma</li>
+    <li>Neon Serverless PostgresSQL</li>
+    <li>Stripe Payments API</li>
+    <li>Resend Email API</li>
+    <li>Firebase Cloud Functions</li>
+    <li>Markdown</li>
+    <li>Figma for design</li>
+    <li>Some other tools</li>
+  </ul>
+</div>
 </div>
 
             </div>
@@ -222,26 +471,26 @@ Technologies used:
               </div>
               </div>
 
-              <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal my-8">
-Technologies used:
-<ul className="list-disc list-inside">
-<li>React</li>
-<li>Next JS</li>
-  <li>Typescript</li>
-  <li>Three JS</li>
-  <li>OpenGL/GLSL</li>
-  <li>Blender</li>
-  <li>GSAP</li>
-  <li>Tailwind CSS</li>
-  <li>Redux State Management</li>
-  <li>Chart.js</li>
-  <li>Nextauth</li>
-  <li>Prisma</li>
-  <li>Neon Serverless PostgresSQL</li>
-  <li>Stripe Payments API</li>
-  <li>Figma for design</li>
-</ul>
-</p>
+              <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal my-8">
+                <span className="font-bold">Technologies used:</span>
+                <ul className="list-disc list-inside mt-2">
+                  <li>React</li>
+                  <li>Next JS</li>
+                  <li>Typescript</li>
+                  <li>Three JS</li>
+                  <li>OpenGL/GLSL</li>
+                  <li>Blender</li>
+                  <li>GSAP</li>
+                  <li>Tailwind CSS</li>
+                  <li>Redux State Management</li>
+                  <li>Chart.js</li>
+                  <li>Nextauth</li>
+                  <li>Prisma</li>
+                  <li>Neon Serverless PostgresSQL</li>
+                  <li>Stripe Payments API</li>
+                  <li>Figma for design</li>
+                </ul>
+              </div>
 
 
             </div>
@@ -533,46 +782,16 @@ The app provides an AI-based productivity tool for college students to manage co
             </div>
           }
           fullContent={
-            <div className="pt-8">
-              
+            <div className="pt-8 space-y-8">
               <div className="grid grid-cols-1 gap-4">
                 <div>
                   <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
-                    Commonwealth Cultural & Archaeological Assessors, LLC
-                  </h3>
-                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
-                    I built a website for <a href="https://commonwealthcultural.com" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">a local archaeology firm</a>. They requested a traditional, basic yet modern design language that outlined their core services. I settled on a palette of warm, earthy colors, a clean sans-serif font, and a simple, content-focused layout, with a few subtle scroll and hover animations to keep the user engaged. Here is a gif of the homepage:
-                  </p>
-                </div>
-                
-                
-                <div className="flex flex-col gap-4">
-                  <Image
-                    src="/commonwealth.gif"
-                    alt="Commonwealth Cultural homepage animation"
-                    width={1000}
-                    height={1000}
-                    className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                  <Image
-                    src="/commonwealth.png"
-                    alt="Commonwealth Cultural homepage screenshot"
-                    width={1000}
-                    height={1000}
-                    className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                </div>
-              </div> 
-              
-              <div className="grid grid-cols-1 gap-4 pt-8">
-              <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
                     3D Mockup Generator for Mobile Product Screenshots
                   </h3>
                   <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
                     I built a tool to generate 3D mockups of mobile apps for use in design portfolios or marketing presentations. The tool was built using React, Three.js, and Firebase for file uploads. It allows users to upload an image of their mobile app, and then generate and download a PNG of the 3D device with a variety of customization options. Here is a gif of the tool in action:
                   </p>
                 </div>
-                
                 <div className="flex flex-col gap-4">
                   <Image
                     src="/mockup.gif"
@@ -581,69 +800,66 @@ The app provides an AI-based productivity tool for college students to manage co
                     height={1000}
                     className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
-              
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 pt-8">
-              <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
-                    Experimental Website Concepts
-                  </h3>
-                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
-Interactive virtual art gallery                 </p>
-                </div>
-                
+              <div className="grid grid-cols-1 gap-4">
+                <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                  Experimental Website Concepts
+                </h3>
+                <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                  Interactive virtual art gallery
+                </p>
                 <div className="flex flex-col gap-4">
                   <Image
                     src="/gallery.gif"
-                    alt="3D mockup generator for mobile product screenshots"
+                    alt="Experimental virtual art gallery concept"
                     width={1000}
                     height={1000}
                     className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
-              
-              </div>
-              <div className="grid grid-cols-1 gap-4 pt-8">
-              
-                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
-Interactive material product landing page                  </p>
                 </div>
-                
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                  Interactive material product landing page
+                </p>
                 <div className="flex flex-col gap-4">
                   <Image
                     src="/material.gif"
-                    alt="3D mockup generator for mobile product screenshots"
+                    alt="Interactive material product landing page concept"
                     width={1000}
                     height={1000}
                     className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
-              
+                </div>
               </div>
 
-              
-              
-              <div className="grid grid-cols-1 gap-4 pt-8">
+              <div className="grid grid-cols-1 gap-4">
                 <div className="col-span-2">
-                <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">Conflict Resolution Story Builder</h3>
-                <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
-                  I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution. After working with them to refine the idea, I designed and developed an MVP that allows users to play through a collection of decision-based story games, where the user's choices result in certain outcomes with different conflict resolution scores, which are displayed in the score tracker. The game helps students think through difficult conversations and situations, in order to help them develop the skills to resolve interpersonal conflicts effectively. The game also allows users to create their own stories using an intuitive drag-and-drop decision tree building interface. The MVP was built using React, Next JS, Tailwind CSS, and React Flow for the frontend, and Prisma/PostgreSQL for the backend. The app received positive feedback from beta users, who enjoyed the intuitive, animated interface, and the ability to create their own stories.
-                </p>
+                  <h3 className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-bold">
+                    Conflict Resolution Story Builder
+                  </h3>
+                  <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
+                    I was approached by an M.B.A. graduate from Brandeis who had an idea for a game that would help students understand the complexities of conflict resolution. After working with them to refine the idea, I designed and developed an MVP that allows users to play through a collection of decision-based story games, where the user's choices result in certain outcomes with different conflict resolution scores, which are displayed in the score tracker. The game helps students think through difficult conversations and situations, in order to help them develop the skills to resolve interpersonal conflicts effectively. The game also allows users to create their own stories using an intuitive drag-and-drop decision tree building interface. The MVP was built using React, Next JS, Tailwind CSS, and React Flow for the frontend, and Prisma/PostgreSQL for the backend. The app received positive feedback from beta users, who enjoyed the intuitive, animated interface, and the ability to create their own stories.
+                  </p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Image
                     src="/conflict1.gif"
-                    alt="hero template"
+                    alt="Conflict resolution story builder animation 1"
                     width={1000}
                     height={1000}
                     className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
                   <Image
                     src="/conflict2.gif"
-                    alt="hero template"
+                    alt="Conflict resolution story builder animation 2"
                     width={1000}
                     height={1000}
                     className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                   />
-                 
                 </div>
               </div>
             </div>
@@ -662,27 +878,6 @@ Interactive material product landing page                  </p>
                             <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
                 I also practice nature photography and sketching in my free time.
               </p>
-              <Image
-                    src="/nature.png"
-                    alt="hero template"
-                    width={1000}
-                    height={1000}
-                    className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                                <Image
-                    src="/nature2.png"
-                    alt="hero template"
-                    width={1000}
-                    height={1000}
-                    className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                                <Image
-                    src="/nature3.png"
-                    alt="hero template"
-                    width={1000}
-                    height={1000}
-                    className="rounded-lg object-contain h-auto w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
               
             </div>
          
