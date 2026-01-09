@@ -14,7 +14,7 @@ export default function Home() {
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
-                Selected engineering and GIS work including QGIS automation tooling, USGS TNM API integration, computer-vision assisted georeferencing research, LiDAR/DEM processing workflows, a geotagged field data collection app, internal storage infrastructure, document automation, and automated cartographic production.
+                Selected engineering and GIS work including QGIS automation tooling, USGS TNM API integration, computer-vision assisted georeferencing research, LiDAR/DEM processing workflows, a geotagged field data collection app, internal storage infrastructure, document automation, and automated cartographic production. These tools and workflows were used in projects for clients including Verizon, Eversource Energy, and the U.S Army Corps of Engineers.
               </p>
             </div>
           }
