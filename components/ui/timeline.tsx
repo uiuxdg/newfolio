@@ -85,7 +85,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       <CursorBlob />
       <div className="max-w-7xl h-screen flex flex-col justify-center items-center mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-4xl text-balance text-center md:text-6xl mb-8 text-black dark:text-white max-w-4xl">
-          I am a product designer and developer.
+          I am a design engineer with a specialty in human computer interaction and spatial interfaces.
         </h2>
         <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
           I&apos;ve been designing and building digital products for several years.
