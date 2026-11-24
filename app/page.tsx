@@ -3,6 +3,7 @@ import { Timeline } from "@/components/ui/timeline";
 import CTASection from "@/components/ui/cta-section";
 import Image from "next/image";
 import { CollapsibleContent } from "@/components/ui/collapsible-content";
+import { CcaaWorkflow } from "@/components/ui/ccaa-workflow";
 
 
 export default function Home() {
@@ -11,12 +12,14 @@ export default function Home() {
       title: "Commonwealth Cultural & Archaeological Assessors, LLC",
       content: (
         <CollapsibleContent
+          expandLabel="Explore geospatial and engineering work"
           preview={
-            <div>
-              <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
-                Selected engineering and GIS work including QGIS automation tooling, USGS TNM API integration, computer-vision assisted georeferencing research, LiDAR/DEM processing workflows, a geotagged field data collection app, internal storage infrastructure, document automation, and automated cartographic production. These tools and workflows were used in projects for clients including Verizon, Eversource Energy, and the U.S Army Corps of Engineers.
+            <>
+              <p className="mb-8 text-base text-neutral-800 dark:text-neutral-200 md:text-lg">
+                I build software that helps archaeologists turn field observations, historical records, and spatial data into maps and regulatory reports. My work spans geotagged field-data interfaces, QGIS and Word automation, and reusable Codex workflows that carry project requirements through to review. My GIS and engineering tools have supported projects for Verizon, Eversource Energy, and the U.S. Army Corps of Engineers.
               </p>
-            </div>
+              <CcaaWorkflow />
+            </>
           }
           fullContent={
             <div className="pt-8">
@@ -99,7 +102,7 @@ export default function Home() {
                     Geotagged Field Photo & STP Data Collection Application
                   </h3>
                   <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-4">
-                    I designed and built a web-based field data collection application to support archaeological documentation at Commonwealth Cultural &amp; Archaeological Assessors. In addition to geotagged photo capture and mapping, the app supports structured shovel test pit (STP) data entry, including stratigraphy, depths, soil descriptions, and observations. The system automatically generates standardized STP profile graphics from entered data, ensuring consistent visual outputs for reporting. Field photos, STP records, and generated graphics are spatially linked and exportable for direct integration into GIS and regulatory reports, reducing transcription errors and significantly accelerating post-fieldwork processing.
+                    I built a web app for archaeologists to capture and map geotagged photos, record shovel test pit (STP) data, and generate standardized soil profiles for reporting. Each test record captures stratigraphy, depths, soil descriptions, and observations. The app links photos, test records, and profile graphics by location and exports them to GIS and regulatory reports, reducing manual transcription after fieldwork.
                   </p>
                   <div className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal">
                     <span className="font-bold">Tools &amp; Technologies:</span>
@@ -257,13 +260,14 @@ export default function Home() {
       ),
     },
     {
+      id: "product-work",
       title: "Interactive Charts with AI",
       content: (
         <CollapsibleContent
           preview={
             <div>
               <p className="text-neutral-800 dark:text-neutral-200 text-md md:text-lg font-normal mb-8">
-                I built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a> independently from scratch, a new data visualization tool that uses a multi-agent AI framework to make data research, analysis, visualization, and sharing take seconds instead of hours. CalcGen had a very successful launch, getting 2200+ users in the first week of beta, and featured as a trending product in some of the biggest AI newsletters in the world.
+                I independently built and launched <a href="https://calcgen.ai" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">CalcGen AI</a>, a data visualization tool that uses multiple agents to research a question and turn the results into an interactive, shareable chart. More than 2,200 users joined in the first week of beta, and AI newsletters featured the launch.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Image

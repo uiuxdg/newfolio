@@ -7,9 +7,9 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { CursorBlob } from "@/components/ui/cursor-blob";
-import { ChevronDown } from "lucide-react";
 
 interface TimelineEntry {
+  id?: string;
   title: string;
   content: React.ReactNode;
 }
@@ -83,73 +83,36 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <CursorBlob />
-      <div className="max-w-7xl h-screen flex flex-col justify-center items-center mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-4xl text-balance text-center md:text-6xl mb-8 text-black dark:text-white max-w-4xl">
-          I am a design engineer with a specialty in human computer interaction and spatial interfaces.
-        </h2>
-        <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
-          I&apos;ve been designing and building digital products for several years.
+      <header className="mx-auto flex min-h-[100svh] max-w-7xl flex-col items-center justify-center px-6 py-20 text-center md:px-8 lg:px-10">
+        <h1 className="mb-6 max-w-4xl text-balance text-4xl text-black dark:text-white sm:text-5xl md:text-6xl">
+          I&apos;m a design engineer building spatial interfaces and AI workflows.
+        </h1>
+        <p className="mb-8 max-w-xl text-lg text-neutral-700 dark:text-neutral-300">
+          My background is in human-computer interaction and full-stack development. I start by learning how people do their work, then build the interfaces, integrations, and automations that fit their tools and decisions.
         </p>
-        <p className="text-neutral-700 mb-8 text-center dark:text-neutral-300 text-lg md:text-base max-w-sm md:max-w-xl">
-          My approach to product design starts with obtaining a deep understanding of the problem and target user groups through research. Then I apply principles from user experience and interaction design to develop a product that is both effective and delightful to use.
-        </p>   
-        <p className="text-neutral-700 mb-4 text-center dark:text-neutral-300 text-lg font-bold md:text-base max-w-sm md:max-w-xl">
-          Here are some of the highlights from my journey.
-        </p>
-        <div className="relative backdrop-blur-xl">
-          <span className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-            <span className="text-black dark:text-white text-lg font-bold flex items-center">
-              Continue
-              <motion.div
-                animate={{ y: [0, 5, 0] }}
-                transition={{ 
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <ChevronDown className="h-5 w-5 ml-2" />
-              </motion.div>
-            </span>
-          </span>
-
-          <motion.div
-            style={{ 
-              position: 'relative',
-              borderRadius: '8px',
-              padding: '2px',
-              background: 'linear-gradient(30deg, rgb(59, 130, 246), rgb(134, 239, 172, 30%), rgb(59, 130, 246))',
-              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-              WebkitMaskComposite: 'xor',
-              maskComposite: 'exclude',
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="z-10"
+        <nav aria-label="Portfolio highlights" className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+          <a
+            href="#ccaa-workflow"
+            className="rounded-lg bg-neutral-900 px-5 py-3 font-bold text-white hover:bg-neutral-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
           >
-            <button
-              onClick={() => {
-                const firstEntry = document.querySelector('.timeline-entry');
-                if (firstEntry) {
-                  firstEntry.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="relative flex items-center justify-center gap-2 bg-background rounded-[7px] px-12 py-3 w-full"
-            >
-              <span className="opacity-0 text-lg font-bold">
-                Continue
-              </span>
-              <ChevronDown className="absolute right-4 h-5 w-5" />
-            </button>
-          </motion.div>
-        </div>
-      </div>
+            See how I built CCAA&apos;s workflows
+          </a>
+          <a
+            href="#product-work"
+            className="rounded-sm px-2 py-2 font-bold text-neutral-700 underline underline-offset-4 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500 dark:text-neutral-200 dark:hover:text-white"
+          >
+            Browse product work
+          </a>
+        </nav>
+      </header>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10 timeline-entry"
+            id={item.id}
+            tabIndex={item.id ? -1 : undefined}
+            className="flex scroll-mt-6 justify-start pt-10 md:pt-40 md:gap-10 timeline-entry"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full timeline-title-container">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center timeline-circle">

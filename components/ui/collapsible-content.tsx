@@ -7,10 +7,16 @@ import { useState } from "react";
 interface CollapsibleContentProps {
   preview: React.ReactNode;
   fullContent: React.ReactNode;
+  expandLabel?: string;
 }
 
-export function CollapsibleContent({ preview, fullContent }: CollapsibleContentProps) {
+export function CollapsibleContent({
+  preview,
+  fullContent,
+  expandLabel = "Read more",
+}: CollapsibleContentProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const buttonLabel = isExpanded ? "Show less" : expandLabel;
 
   return (
     <div className="space-y-4">
@@ -28,56 +34,25 @@ export function CollapsibleContent({ preview, fullContent }: CollapsibleContentP
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="relative backdrop-blur-xl">
-        <span className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <span className="text-black dark:text-white text-lg font-bold flex items-center gap-2">
-            {isExpanded ? "Show less" : "Read more"}
-            <motion.div
-              animate={{ 
-                y: [0, 5, 0],
-                rotate: isExpanded ? 180 : 0 
-              }}
-              transition={{ 
-                y: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                },
-                rotate: {
-                  duration: 0.2
-                }
-              }}
-            >
-              <ChevronDown className="h-5 w-5" />
-            </motion.div>
-          </span>
-        </span>
-
-        <motion.div
-          style={{ 
-            position: 'relative',
-            borderRadius: '8px',
-            padding: '2px',
-            background: 'linear-gradient(30deg, rgb(59, 130, 246), rgb(134, 239, 172, 30%), rgb(59, 130, 246))',
-            WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-            WebkitMaskComposite: 'xor',
-            maskComposite: 'exclude',
-          }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="z-10"
-        >
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="flex items-center justify-center gap-2 bg-background rounded-[7px] px-6 py-3 w-full"
+      <motion.button
+        type="button"
+        aria-expanded={isExpanded}
+        onClick={() => setIsExpanded((expanded) => !expanded)}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.97 }}
+        className="w-full rounded-lg bg-gradient-to-br from-blue-500 via-emerald-400/40 to-blue-500 p-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500"
+      >
+        <span className="flex items-center justify-center gap-2 rounded-md bg-white px-4 py-3 text-center text-base font-bold text-black dark:bg-neutral-950 dark:text-white md:text-lg">
+          {buttonLabel}
+          <motion.span
+            aria-hidden="true"
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            className="shrink-0"
           >
-            <span className="opacity-0 text-lg font-bold flex items-center">
-              {isExpanded ? "Show less" : "Read more"}
-              <ChevronDown className="h-5 w-5 ml-2" />
-            </span>
-          </button>
-        </motion.div>
-      </div>
+            <ChevronDown className="h-5 w-5" />
+          </motion.span>
+        </span>
+      </motion.button>
     </div>
   );
-} 
+}
